@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(151, 193, 255, 0.904);
+}
+.card{
+    width: 30%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    overflow: hidden;
+}
+.card::before{
+    position: absolute;
+    content: '';
+    width:80px;
+    height:80px;
+    border: 10px solid rgba(118, 169, 247, 0.123);
+    border-radius: 100%;
+    right: -4%;
+    top: -40px;
+}
+.card::after{
+    position: absolute;
+    content: '';
+    width:80px;
+    height:80px;
+    border: 10px solid rgba(118, 169, 247, 0.123);
+    border-radius: 100%;
+    left: -4%;
+    bottom: -40px;
+}
+.card_title{
+    width: 100%;
+    height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: rgba(96, 155, 245, 0.904);
+    font-weight: bold;
+}
+.card_title i{
+    margin: 0 5px;
+    color: rgba(151, 193, 255, 0.904);
+}
+/* this is the card body section   */
+.card_body{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 99;
+}
+.card_body ul{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+display: flex; flex-wrap: wrap;}
+    
+    .card_body ul li{
+        list-style: none;
+        background-color: rgba(151, 193, 255, 0.904);
+        padding: 8px 20px;
+        text-transform: capitalize;
+        font-family: 'Open Sans', sans-serif;
+        user-select: none;
+        border-radius: 5px;
+        text-align: left;
+        color: #fff;
+        margin: 5px;
+    }
+    ul li .fa-times{
+       margin-left: 15px;
+       font-size: 1.2rem;
+       cursor: pointer;
+    }
+
+
+    input[type = "text"]{
+        font-family: 'Open Sans', sans-serif;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 40px;
+        margin: 5px 0;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.356);
+        padding: 0 15px 0 15px;
+    }
+    .countDetails{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+    margin: 5px 0;
+    font-size: 1rem;
+    text-align: right;
+    padding: 0 10px;
+    text-transform: capitalize;
+    /* font-weight: bold; */
+    display: none;
+}
+.btnTab{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+button{
+    
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin: 5px 0;
+    background-color: rgb(255, 115, 0);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .6;
+    transition-duration: 500ms;
+}
+button:hover{
+    opacity: 1;
+}
+@media (max-width:768px) {
+    .card{
+        width: 90%;
+    }
+}
+
+/* end the css code */
